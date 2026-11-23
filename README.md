@@ -9,7 +9,7 @@ This template is intentionally small: no auth provider, no database adapter, no 
 
 ## Features
 
-- Expo SDK 57 with Expo Router
+- Expo SDK 58 with Expo Router
 - tRPC v11 with end-to-end types
 - Expo API Routes at `src/app/api`
 - TanStack Query configured for React Native focus and network status
