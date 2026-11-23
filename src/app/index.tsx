@@ -1,6 +1,7 @@
 import { api } from "@/trpc/react";
 import { Suspense } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
+import { ClientOnly } from "@/components/client-only";
 import { Hello } from "@/components/hello";
 
 export default function Index() {
@@ -25,9 +26,11 @@ export default function Index() {
           width: "100%",
         }}
       >
-        <Suspense fallback={<Text>Loading...</Text>}>
-          <Hello />
-        </Suspense>
+        <ClientOnly fallback={<Text>Loading...</Text>}>
+          <Suspense fallback={<Text>Loading...</Text>}>
+            <Hello />
+          </Suspense>
+        </ClientOnly>
         <TouchableOpacity
           style={{
             backgroundColor: "#0070f3",
