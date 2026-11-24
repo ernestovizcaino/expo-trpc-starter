@@ -8,7 +8,7 @@ This project loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.
 
 ### Added
 
-- Expo SDK 57 starter setup with Expo Router API Routes.
+- Expo SDK 58 starter setup with Expo Router API Routes.
 - tRPC v11, TanStack Query, SuperJSON, and Zod wiring.
 - React Native focus and network handling for TanStack Query.
 - Public open-source project docs and GitHub templates.
@@ -18,3 +18,8 @@ This project loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.
 
 - tRPC client uses relative `/api/trpc` by default for Expo Router API routes.
 - Documented the Expo Router folder layout verified from a fresh Expo project.
+- Upgraded to Expo SDK 58 (React Native 0.88, React 19.3) and bumped tRPC, TanStack Query, and Zod.
+
+### Fixed
+
+- Web server rendering no longer fails with `Invalid URL`: Suspense tRPC queries now render client-only via `ClientOnly`.
